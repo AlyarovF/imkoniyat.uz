@@ -1,0 +1,283 @@
+.swiper-text .swiper-pagination {
+  position: relative;
+}
+
+.swiper-text .swiper-pagination span {
+  position: relative;
+  color: transparent;
+  border: 1px solid grey;
+}
+
+.swiper-pagination span {
+  width: 30px !important;
+  height: 7px !important;
+  border-radius: 0 !important;
+  margin: 0px 6px !important;
+}
+
+.mission .swiper-pagination-bullet {
+  background: transparent !important;
+  opacity: 1 !important;
+}
+
+.hero .swiper-pagination-bullet {
+  background: white !important;
+  opacity: 1 !important;
+  width: 40px;
+}
+
+.hero .swiper-pagination-bullet-active,
+.mission .swiper-pagination-bullet-active {
+  background: #14284b !important;
+}
+
+.swiper-slide {
+  opacity: 0 !important;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.swiper-slide h3 {
+  width: 50% !important;
+  display: block;
+  margin: auto;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.mission {
+  height: 800px;
+  background: #fff url(https://oboronprom.uz/images/bg4.png) no-repeat center;
+  padding: 100px 20px;
+}
+
+
+/* activity */
+.activity {
+  height: 700px;
+  background: url("../../assets/bg6.jpg") no-repeat center;
+  background-size: cover;
+  color: #ffffff;
+  padding-top: 100px;
+}
+
+.activity .swiper-pagination {
+  position: absolute;
+  bottom: -200px !important;
+}
+
+.activity .swiper-pagination span {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 100px !important;
+  border: 3px solid #14284b !important;
+  background-color: transparent !important;
+}
+
+.activity .swiper-pagination span::after {
+  font-size: 14px;
+}
+
+.activity .swiper-pagination span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/sprite.png") no-repeat;
+  background-position: 0 -205px !important;
+  width: 35px;
+  height: 36px;
+  top: 35px;
+  left: 55px;
+}
+
+.activity .swiper-pagination span:nth-child(1)::after {
+  content: "Консультации";
+  color: white;
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.activity .swiper-pagination span:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/sprite.png") no-repeat;
+  background-position: -42px -204px !important;
+  width: 35px;
+  height: 36px;
+  top: 35px;
+  left: 55px;
+}
+
+.activity .swiper-pagination span:nth-child(2)::after {
+  content: "Территориальные отделения";
+  color: white;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.activity .swiper-pagination span:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/sprite.png") no-repeat;
+  background-position: -86px -205px !important;
+  width: 35px;
+  height: 36px;
+  top: 35px;
+  left: 55px;
+}
+
+.activity .swiper-pagination span:nth-child(3)::after {
+  content: "Члены Ассоциации";
+  color: white;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.activity .swiper-pagination span:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/sprite.png") no-repeat;
+  background-position: -126px -204px !important;
+  width: 35px;
+  height: 36px;
+  top: 35px;
+  left: 55px;
+}
+
+.activity .swiper-pagination span:nth-child(4)::after {
+  content: "Права лиц с инвалидностью";
+  color: white;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.activity .swiper {
+  overflow: visible;
+}
+
+/* activity */
+
+
+/* mission strategy */
+.strategy .btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.strategy button {
+  display: flex;
+  border: 3px solid black;
+  color: black;
+  background: transparent;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.strategy button svg {
+  color: #14284b;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.strategy button:hover {
+  background: black;
+  color: white !important;
+}
+
+.strategy button:hover svg {
+  color: white !important;
+}
+
+/* mission strategy */
+
+
+/* stat */
+.stat {
+  position: relative;
+}
+
+.stat h1 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 74px;
+  text-align: center;
+  color: #fff;
+}
+
+.stat .stat-blocks>div a {
+  color: white;
+}
+
+.stat .stat-blocks>div {
+  width: 20.0% !important;
+  background-size: cover !important;
+  height: 650px !important;
+  padding-top: 325px !important;
+  display: block !important;
+  text-align: center !important;
+  float: left !important;
+}
+
+.stat .stat-blocks .stat-block:nth-child(1) {
+  background: url("../../assets/stat-block1.jpg");
+}
+
+.stat .stat-blocks .stat-block:nth-child(2) {
+  background: url("../../assets/stat-block2.jpg");
+}
+
+.stat .stat-blocks .stat-block:nth-child(3) {
+  background: url("../../assets/stat-block4.jpg");
+}
+
+.stat .stat-blocks .stat-block:nth-child(4) {
+  background: url("../../assets/stat-block3.jpg");
+}
+
+.stat .stat-blocks .stat-block:nth-child(5) {
+  background: url("../../assets/stat-block5.jpg");
+}
+
+/* stat */
+
+@media screen and (max-width: 960px) {
+
+  .activity h1,
+  .mission h1,
+  .stat h1 {
+    font-size: 40px !important;
+  }
+
+  .activity h3,
+  .swiper-slide h3 {
+    width: 100% !important;
+    font-size: 16px;
+  }
+
+  .stat .stat-blocks>div {
+    float: none !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .activity .swiper-pagination {
+    position: absolute;
+    bottom: -350px !important;
+  }
+}

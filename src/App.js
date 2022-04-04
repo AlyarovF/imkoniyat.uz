@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home";
+import Home from "./pages/Home/";
 import Convention from "./pages/Convention"
 import Library from "./pages/Library"
 import Contact from "./pages/Contact"
