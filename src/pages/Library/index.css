@@ -1,0 +1,21 @@
+.library {
+    width: 90%;
+    display: block;
+    margin: 40px auto;
+}
+
+.library .documents {
+    background-color: white;
+    padding: 20px;
+}
+
+.library .documents a {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.library .documents a:hover {
+    color: #14284b;
+}

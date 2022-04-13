@@ -1,0 +1,67 @@
+.Sessions {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.Sessions-js .heading .text {
+    max-width: 700px;
+    color: white;
+}
+
+.Sessions-js .heading .text h3 {
+    max-width: 700px;
+    color: white;
+}
+
+.Sessions-js .heading {
+    min-height: 500px;
+    background: url("../../../assets/about.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Sessions-js .heading .text {
+    max-width: 700px;
+}
+
+
+.Sessions-js .heading .text h1 {
+    margin-bottom: 10px;
+}
+
+.Sessions .content {
+    width: 100%;
+}
+
+.Sessions .content {
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+.Sessions .content .content-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Sessions .content .content-item .text {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .Sessions {
+        display: block !important;
+    }
+
+    .Sessions .sideBar {
+        width: 100% !important;
+    }
+
+    .Sessions .content {
+        width: 100% !important;
+    }
+}

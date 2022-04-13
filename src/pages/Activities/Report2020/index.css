@@ -1,0 +1,78 @@
+.Report2020 {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.Report2020 h1 {
+    margin: 30px 0;
+}
+
+.Report2020 .sideBar {
+    width: 30%;
+}
+
+.Report2020 .sideBar li a {
+    background: white !important;
+}
+
+.Report2020 .sideBar li a {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.Report2020 .sideBar li a:hover::before {
+    background: #00436E;
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 6px;
+}
+
+.Report2020 .sideBar li {
+    list-style-type: none;
+}
+
+.Report2020 .sideBar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.Report2020 .content {
+    width: 68%;
+}
+
+.Report2020 .content .text,
+.Report2020 .content .media {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.Report2020 .content .text {
+    padding: 10px;
+    box-shadow: 5px 5px 10px 1px #e4e4e4;
+}
+
+.Report2020 .content .content-item {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .Report2020 {
+        display: block !important;
+    }
+
+    .Report2020 .sideBar {
+        width: 100% !important;
+    }
+
+    .Report2020 .content {
+        width: 100% !important;
+    }
+}

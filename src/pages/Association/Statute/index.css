@@ -1,0 +1,63 @@
+.About {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.Statute h1 {
+    margin: 30px 0;
+}
+
+.About .sideBar {
+    width: 30%;
+}
+
+.About .sideBar li a {
+    background: white !important;
+}
+
+.About .sideBar li a {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.About .sideBar li a:hover::before {
+    background: #00436E;
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 6px;
+}
+
+.About .sideBar li {
+    list-style-type: none;
+}
+
+.About .sideBar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.About .content {
+    width: 68%;
+}
+
+.About .content .text,
+.About .content .media {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.About .content .text {
+    padding: 10px;
+    box-shadow: 5px 5px 10px 1px #e4e4e4;
+}
+
+.About .content .content-item {
+    margin-bottom: 20px;
+}

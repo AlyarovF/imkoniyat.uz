@@ -107,19 +107,23 @@ li.dropdown {
         position: relative;
         background-color: #14284b;
     }
+
     .opportunity i {
         color: #ffffff;
     }
+
     .opportunity {
         position: absolute;
         left: 20px;
     }
+
     .menu-icon {
         display: none;
         color: #ffffff;
         font-size: 20px;
         cursor: pointer;
     }
+
     .nav-menu {
         background-color: #14284b;
         display: flex;
@@ -134,12 +138,14 @@ li.dropdown {
         justify-content: flex-start;
         z-index: 10;
     }
+
     .nav-menu.active {
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
     }
+
     .nav-links {
         color: white;
         text-align: center;
@@ -147,24 +153,27 @@ li.dropdown {
         border-bottom: 1px solid white;
         display: table;
     }
+
     .nav-links:hover {
         background-color: #14284b;
         color: white;
     }
+
     .navbar-logo {
         display: none;
     }
+
     .menu-icon {
         display: block;
         position: absolute;
         right: 20px;
     }
-    
-    .dropdown-content{
+
+    .dropdown-content {
         position: relative;
     }
 
-    .dropdown-content a{
+    .dropdown-content a {
         text-align: center;
     }
 
@@ -174,3 +183,164 @@ li.dropdown {
         display: block !important;
     }
 }
+
+
+
+
+
+
+
+
+/* Opportunity */
+.opportunity .opportunity-modul {
+    position: relative;
+    display: inline-block;
+}
+
+.opportunity .opportunity-box.active {
+    display: block;
+}
+
+.opportunity .opportunity-box {
+    display: none;
+}
+
+.opportunity .opportunity-content {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    /* min-width: 500px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.opportunity .opportunity-content div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opportunity .opportunity-content .item {
+    padding: 40px 50px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.opportunity .opportunity-content .item h1 {
+    color: black;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: xx-large;
+}
+
+.opportunity .opportunity-content .item.color {
+    background-color: #0059b2;
+}
+
+.opportunity .opportunity-content .item.discolor {
+    background-color: #5b5b5b;
+}
+
+.opportunity .opportunity-content .item.discolor h1 {
+    color: #5b5b5b;
+}
+
+.opportunity .opportunity-content .item.invert {
+    background-color: #080808;
+}
+
+.opportunity .opportunity-content .item.invert h1 {
+    color: #ffffff;
+    background-color: black;
+}
+
+
+.special-box {
+    padding: 0 20px;
+}
+
+.special-checkboxes {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.special-range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opportunity .search .opportunity-content {
+    display: block;
+    padding: 20px;
+}
+
+.opportunity .search .opportunity-content div:nth-child(1) {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.opportunity .search .opportunity-content div:nth-child(1) input {
+    padding: 10px 15px;
+    border: 1px solid #a7a7a7;
+    border-radius: 5px;
+    outline: none;
+}
+
+.opportunity .search .opportunity-content div:nth-child(2) {
+    background-color: #14284b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opportunity .search .opportunity-content div:nth-child(2) i {
+    color: white;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .opportunity .opportunity-content {
+        position: absolute;
+        right: auto;
+        display: block;
+    }
+
+    .opportunity .opportunity-content div:nth-child(1) {
+        display: block;
+    }
+
+    .opportunity .opportunity-content div:nth-child(1) .item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .special-checkboxes {
+        font-size: 17px;
+    }
+}
+
+
+
+
+
+
+
+/* Opportunity */

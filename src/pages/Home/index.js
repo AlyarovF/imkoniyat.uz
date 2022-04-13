@@ -12,6 +12,7 @@ import { FaCaretRight } from 'react-icons/fa'
 import image from '../../assets/imkoniyatlarheaderrus.png'
 
 import { EffectFade, Pagination } from "swiper";
+import Footer from '../../components/Footer'
 
 const Home = () => {
   return (
@@ -160,6 +161,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }

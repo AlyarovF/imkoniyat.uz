@@ -1,0 +1,99 @@
+.ListOfTheBoard-js {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.ListOfTheBoard h1 {
+    margin: 30px 0;
+}
+
+.ListOfTheBoard-js .sideBar {
+    width: 30%;
+}
+
+.ListOfTheBoard-js .sideBar li a {
+    background: white !important;
+}
+
+.ListOfTheBoard-js .sideBar li a {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.ListOfTheBoard-js .sideBar li a:hover::before {
+    background: #00436E;
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 6px;
+}
+
+.ListOfTheBoard-js .sideBar li {
+    list-style-type: none;
+}
+
+.ListOfTheBoard-js .sideBar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.ListOfTheBoard-js .content {
+    width: 68%;
+}
+
+.ListOfTheBoard-js .content .leader-person {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.ListOfTheBoard-js .content .text-person h3 {
+    color: rgb(100, 100, 100);
+    height: inherit !important
+}
+
+.ListOfTheBoard-js .content .text-person a {
+    display: block;
+    position: relative;
+    text-align: right;
+    text-decoration: none;
+    color: #00436E;
+    margin-top: 50px;
+}
+
+.ListOfTheBoard-js .content .text-person a::before {
+    background: #00436E;
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    right: 90px;
+    width: 6px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .ListOfTheBoard-js {
+        display: block !important;
+    }
+
+    .ListOfTheBoard-js .sideBar {
+        width: 100% !important;
+    }
+
+    .ListOfTheBoard-js .content {
+        width: 100% !important;
+    }
+
+    .ListOfTheBoard-js .content .text-person {
+        text-align: right;
+    }
+}

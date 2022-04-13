@@ -1,0 +1,99 @@
+.Leadership-js {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.Leadership h1 {
+    margin: 30px 0;
+}
+
+.Leadership-js .sideBar {
+    width: 30%;
+}
+
+.Leadership-js .sideBar li a {
+    background: white !important;
+}
+
+.Leadership-js .sideBar li a {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.Leadership-js .sideBar li a:hover::before {
+    background: #00436E;
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 6px;
+}
+
+.Leadership-js .sideBar li {
+    list-style-type: none;
+}
+
+.Leadership-js .sideBar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.Leadership-js .content {
+    width: 68%;
+}
+
+.Leadership-js .content .leader-person {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.Leadership-js .content .text-person h3 {
+    color: rgb(100, 100, 100);
+    height: inherit !important
+}
+
+.Leadership-js .content .text-person a {
+    display: block;
+    position: relative;
+    text-align: right;
+    text-decoration: none;
+    color: #00436E;
+    margin-top: 50px;
+}
+
+.Leadership-js .content .text-person a::before {
+    background: #00436E;
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    right: 90px;
+    width: 6px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .Leadership-js {
+        display: block !important;
+    }
+
+    .Leadership-js .sideBar {
+        width: 100% !important;
+    }
+
+    .Leadership-js .content {
+        width: 100% !important;
+    }
+
+    .Leadership-js .content .text-person {
+        text-align: right;
+    }
+}

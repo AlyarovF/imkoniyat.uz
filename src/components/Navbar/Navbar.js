@@ -4,10 +4,18 @@ import { Outlet, Link } from "react-router-dom";
 import './Navbar.css'
 
 export default class Navbar extends Component {
-  state = { clicked: false }
+  state = { clicked: false, specialbox: false, searchsys: false }
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked })
+  }
+
+  specialBox = () => {
+    this.setState({ specialbox: !this.state.specialbox })
+  }
+
+  searchSys = () => {
+    this.setState({ searchsys: !this.state.searchsys })
   }
 
   render() {
@@ -34,10 +42,10 @@ export default class Navbar extends Component {
                     <Link to="" className={item.cName}>
                       {item.title} <i className="fa-solid fa-chevron-down"></i>
                     </Link>
-                    <div class="dropdown-content">
+                    <div className="dropdown-content">
                       {item.dropDown.map((drop, index) => {
                         return (
-                          <a href={drop.url} className={drop.cName}>{drop.title}</a>
+                          <Link to={drop.url} className={drop.cName}>{drop.title}</Link>
                         )
                       })}
                     </div>
@@ -46,10 +54,59 @@ export default class Navbar extends Component {
               }
             })}
           </ul>
-          <div className='opportunity'>
-            <i class="fa-solid fa-eye"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+          <ul className='opportunity'>
+            <li className='opportunity-modul speech'>
+              <Link onClick={this.specialBox} to="" className=""><i className="fa-solid fa-eye"></i></Link>
+              <div className={this.state.specialbox ? 'opportunity-box active' : 'opportunity-box'}>
+                <div className='opportunity-content'>
+                  <div>
+                    <div className='item color'>
+                      <h1>COLOR</h1>
+                    </div>
+                    <div className='item discolor'>
+                      <h1>DISCOLOR</h1>
+                    </div>
+                    <div className='item invert'>
+                      <h1>INVERT</h1>
+                    </div>
+                  </div>
+                  <div className="special-box">
+                    <div className="special-checkboxes">
+                      <label>
+                        <input type="checkbox" />
+                        <span>Disphoto</span>
+                      </label>
+                      <label>
+                        <input type="checkbox" />
+                        <span>TTS</span>
+                      </label>
+                    </div>
+                    <h3>Font size</h3>
+                    <div className="special-range">
+                      <p>Aa</p>
+                      <input type="range" className="range" min="10" value="16" max="22" />
+                      <h3>Aa</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li className='opportunity-modul search'>
+              <Link onClick={this.searchSys} to="" className=""><i className="fa-solid fa-magnifying-glass"></i></Link>
+              <div className={this.state.searchsys ? 'opportunity-box active' : 'opportunity-box'}>
+                <div className='opportunity-content'>
+                  <div>
+                    <span>Введите запрос</span>
+                    <input type="search" placeholder='search...' />
+                  </div>
+                  <div>
+                    Search
+                    <i className='fas fa-search'></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </nav>
         <Outlet />
       </>

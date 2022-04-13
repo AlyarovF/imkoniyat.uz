@@ -1,0 +1,19 @@
+.convention {
+    width: 90%;
+    display: block;
+    margin: 40px auto;
+}
+
+.convention .convention-item {
+    background-color: white;
+    padding: 20px;
+}
+
+.convention p {
+    font-family: 'DroidSans', sans-serif;
+}
+
+.convention a {
+    text-decoration: none;
+    color: #98aed3;
+}

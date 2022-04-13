@@ -1,0 +1,67 @@
+.Accessibility {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.Accessibility-js .heading .text {
+    max-width: 700px;
+    color: white;
+}
+
+.Accessibility-js .heading .text h3 {
+    max-width: 700px;
+    color: white;
+}
+
+.Accessibility-js .heading {
+    min-height: 500px;
+    background: url("../../../assets/about.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Accessibility-js .heading .text {
+    max-width: 700px;
+}
+
+
+.Accessibility-js .heading .text h1 {
+    margin-bottom: 10px;
+}
+
+.Accessibility .content {
+    width: 100%;
+}
+
+.Accessibility .content {
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+.Accessibility .content .content-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Accessibility .content .content-item .text {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .Accessibility {
+        display: block !important;
+    }
+
+    .Accessibility .sideBar {
+        width: 100% !important;
+    }
+
+    .Accessibility .content {
+        width: 100% !important;
+    }
+}
