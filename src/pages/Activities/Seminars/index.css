@@ -72,7 +72,8 @@
 }
 
 .Seminars .content {
-    width: 68%;
+    /* width: 68%; */
+    text-align: center;
 }
 
 .Seminars .content .text,

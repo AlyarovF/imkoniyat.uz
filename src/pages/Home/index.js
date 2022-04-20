@@ -14,7 +14,10 @@ import image from '../../assets/imkoniyatlarheaderrus.png'
 import { EffectFade, Pagination } from "swiper";
 import Footer from '../../components/Footer'
 
+import { useTranslation } from 'react-i18next'
+
 const Home = () => {
+  const { t } = useTranslation()
   return (
     <>
       <div className='hero' style={{ margin: "auto !important" }}>
@@ -51,7 +54,7 @@ const Home = () => {
       </div>
 
       <div className='mission'>
-        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>ЦИТАТЫ</h1>
+        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>{t("home_quotes")}</h1>
         <Swiper
           className='swiper-text'
           spaceBetween={30}
@@ -63,22 +66,22 @@ const Home = () => {
           style={{ textAlign: "center", margin: "auto", display: "block" }}
         >
           <SwiperSlide>
-            <h3>«Комиссией по подготовке предложений, направленных на кардинальное совершенствование системы государственной поддержки лиц с инвалидностью, образованной распоряжением Президента Республики Узбекистан от 1 августа 2017 года № Р–5006, проведено комплексное и глубокое изучение состояния дел в сфере раннего выявления и предупреждения инвалидности, медико-социальной помощи лицам с инвалидностью, их профессионального обучения и трудоустройства.» - Мирзиёев Ш.М.</h3>
+            <h3>{t("home_quotes_1")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>«Установить с 1 января 2018 года ставку фиксированного налога независимо от вида деятельности и места его осуществления для индивидуальных предпринимателей, являющихся лицами с инвалидностью I и II группы, в размере 50 процентов минимальной заработной платы в месяц, а за каждого нанятого индивидуальным предпринимателем работника из числа лиц с инвалидностью I и II группы – в размере 15 процентов минимальной заработной платы в месяц.» - Мирзиёев Ш.М.</h3>
+            <h3>{t("home_quotes_2")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>«Ввести начиная с 2018/2019 учебного года порядок, в соответствии с которым для лиц с инвалидностью дополнительно выделяется двухпроцентная квота приема в высшие образовательные учреждения от общего количества приема абитуриентов. Средствам массовой информации организовать сопровождение выпускаемых новостей, телепередач и видеофильмов субтитрами или сурдопереводом, расширение изданий со специальным шрифтом, способствующих повышению доступа лиц с инвалидностью к получению информации и обеспечению их досуга.» - Мирзиёев Ш.М.</h3>
+            <h3>{t("home_quotes_3")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>«С 1 июня 2018 года вводится единый электронный реестр лиц с инвалидностью, включающий комплексную информацию о них (персональные данные о лицах с инвалидностью, размеры и виды денежных выплат, выданные технические средства реабилитации, протезно-ортопедические изделия и другое), что обеспечит организацию эффективной лечебной и реабилитационной работы. Для решения этой задачи будут привлечены иностранные инвестиции в сферу производства технических средств реабилитации и протезно-ортопедических изделий, в том числе путем содействия в модернизации действующих предприятий, создания в республике новых производств с применением современных технологий.» - Мирзиёев Ш.М.</h3>
+            <h3>{t("home_quotes_4")}</h3>
           </SwiperSlide>
         </Swiper>
       </div>
 
       <div className='activity'>
-        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>ДЕЯТЕЛЬНОСТЬ</h1>
+        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>{t("home_activity")}</h1>
 
         <Swiper
           className='swiper-text'
@@ -91,22 +94,22 @@ const Home = () => {
           style={{ textAlign: "center", margin: "auto", display: "block" }}
         >
           <SwiperSlide className='consult'>
-            <h3>Основной целью деятельности Ассоциации инвалидов является создание инклюзивного общества</h3>
+            <h3>{t("home_activity_1")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Оказаны консультации по социальным и правовым вопросам более 200 лицам с инвалидностью.</h3>
+            <h3>{t("home_activity_2")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>На сегодняшний день Ассоциация инвалидов Узбекистана объединяет 27 организаций инвалидов и имеет 8 областных территориальных отделений</h3>
+            <h3>{t("home_activity_3")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Члены Ассоциации инвалидов  разработали проект  «О дополнительных мерах государственной поддержки общественных объединений лиц с инвалидностью»</h3>
+            <h3>{t("home_activity_4")}</h3>
           </SwiperSlide>
         </Swiper>
       </div>
 
       <div className='mission strategy'>
-        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>МИССИЯ АССОЦИАЦИИ</h1>
+        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>{t("home_mission")}</h1>
         <Swiper
           className='swiper-text'
           spaceBetween={30}
@@ -118,46 +121,46 @@ const Home = () => {
           style={{ textAlign: "center", margin: "auto", display: "block" }}
         >
           <SwiperSlide>
-            <h3>Деятельность Ассоциации инвалидов — направлена на расширение прав и возможностей лиц с инвалидностью и обеспечение их активного участия в политической, экономической, социальной и культурной жизни в таких формах, при которых уважаются и учитываются их права и особенности. Ассоциация инвалидов продвигает понимание инвалидности, как проблему соблюдения прав</h3>
+            <h3>{t("home_mission_1")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Основной целью — деятельности Ассоциации инвалидов является создание инклюзивного общества (общества — где всем гражданам созданы равные возможности для развития и реализации их потенциала).</h3>
+            <h3>{t("home_mission_2")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Осуществление общественного контроля за реализацией нормативно-правовых актов в сфере зашиты прав лиц с инвалидностью и развитии гражданского общества.</h3>
+            <h3>{t("home_mission_3")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Просвещении всего общества о жизнедеятельности и правах лиц с инвалидностью.</h3>
+            <h3>{t("home_mission_4")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Разработка проектов нормативно-правовых актов в сфере зашиты прав лиц с инвалидностью, а также развитии гражданского общества.</h3>
+            <h3>{t("home_mission_5")}</h3>
           </SwiperSlide>
           <SwiperSlide>
-            <h3>Развитие международного сотрудничества во вопросах зашиты прав лиц с инвалидностью и развитие гражданского общества.</h3>
+            <h3>{t("home_mission_6")}</h3>
           </SwiperSlide>
         </Swiper>
 
-        <Link className='btn-link' to="/about/"><button>Подробнее <FaCaretRight /></button></Link>
+        <Link className='btn-link' to="/about/"><button>{t("home_mission_more")} <FaCaretRight /></button></Link>
       </div>
 
       <div className='stat'>
-        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>ПОПУЛЯРНЫЕ РАЗДЕЛЫ</h1>
+        <h1 style={{ textAlign: "center", margin: "auto", fontSize: "72px", marginBottom: "20px" }}>{t("home_stat")}</h1>
 
         <div className='stat-blocks'>
           <div className='stat-block'>
-            <Link to="">Мероприятия</Link>
+            <Link to="">{t("home_stat_1")}</Link>
           </div>
           <div className='stat-block'>
-            <Link to="">Инклюзивное общество</Link>
+            <Link to="">{t("home_stat_1")}</Link>
           </div>
           <div className='stat-block'>
-            <Link to="">Библиотека</Link>
+            <Link to="">{t("home_stat_2")}</Link>
           </div>
           <div className='stat-block'>
-            <Link to="">Активный образ жизни</Link>
+            <Link to="">{t("home_stat_3")}</Link>
           </div>
           <div className='stat-block'>
-            <Link to="">Интересные статьи</Link>
+            <Link to="">{t("home_stat_4")}</Link>
           </div>
         </div>
       </div>

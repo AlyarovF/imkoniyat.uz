@@ -1,13 +1,14 @@
 import React from "react"
 import Footer from "../../components/Footer"
-import ConvectionItems from "./convention-item"
 import './index.css'
+import { useTranslation } from "react-i18next"
 
 const Convention = () => {
+    const { t } = useTranslation()
     return (
         <>
             <div className="convention">
-                <h1>Конвенция ООН о правах инвалидов</h1>
+                <h1>{t("convention_title")}</h1>
                 <div className="convention-item">
                     <p style={{ fontSize: "14pt", textAlign: "justify" }}><i>Принята <a href="http://www.un.org/ru/documents/ods.asp?m=A/RES/61/106">резолюцией 61/106</a> Генеральной Ассамблеи от 13 декабря 2006 года</i></p>
 

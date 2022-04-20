@@ -1,21 +1,57 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Footer from "../../components/Footer"
 import Documents from "./documents"
 import './index.css'
+import { useTranslation } from "react-i18next"
+import api from '../../api/posts'
+import { useNavigate } from "react-router-dom"
+import { hot } from 'react-hot-loader/root';
 
 const Library = () => {
+    const [posts, setPosts] = useState([]);
+    const menuId = "library"
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            const res = await api.get(`/post?menuId=${menuId}`);
+            setPosts(res.data.data);
+        };
+
+
+        fetchPosts();
+    }, []);
+
+    const { t } = useTranslation()
+    let navigate = useNavigate()
     return (
         <>
             <div className="library">
-                <h1>БИБЛИОТЕКА</h1>
-                <div className="documents">
-                    <Documents title="Комплект материалов по вопросам политики в области доступности ИКТ" caption="Комплект материалов для руководителей, участвующих в осуществлении положений Конвенции о правах инвалидов,подготовленный совместно МСЭ и G3ict. Настоящий текст представляет собой выборочный перевод «Комплекта материалов по вопросам политики в области доступности ИКТ для инвалидов» (e-Accessibility Policy Toolkit for Persons with Disabilities) подготовленного G3ict – Глобальной инициативой за инклюзивные ИКТ, ведущей организацией Глобального Альянса Организации Объединенных Наций за ИКТ в целях развития. Оригинал данного материала размещен на веб-сайте G3ict." document="https://www.popliklar.uz/biblioteka/IKT.pdf" />
-                    <Documents title="Комплект материалов по вопросам политики в области доступности ИКТ" caption="Комплект материалов для руководителей, участвующих в осуществлении положений Конвенции о правах инвалидов,подготовленный совместно МСЭ и G3ict. Настоящий текст представляет собой выборочный перевод «Комплекта материалов по вопросам политики в области доступности ИКТ для инвалидов» (e-Accessibility Policy Toolkit for Persons with Disabilities) подготовленного G3ict – Глобальной инициативой за инклюзивные ИКТ, ведущей организацией Глобального Альянса Организации Объединенных Наций за ИКТ в целях развития. Оригинал данного материала размещен на веб-сайте G3ict." document="https://www.popliklar.uz/biblioteka/IKT.pdf" />
-                    <Documents title="Комплект материалов по вопросам политики в области доступности ИКТ" caption="Комплект материалов для руководителей, участвующих в осуществлении положений Конвенции о правах инвалидов,подготовленный совместно МСЭ и G3ict. Настоящий текст представляет собой выборочный перевод «Комплекта материалов по вопросам политики в области доступности ИКТ для инвалидов» (e-Accessibility Policy Toolkit for Persons with Disabilities) подготовленного G3ict – Глобальной инициативой за инклюзивные ИКТ, ведущей организацией Глобального Альянса Организации Объединенных Наций за ИКТ в целях развития. Оригинал данного материала размещен на веб-сайте G3ict." document="https://www.popliklar.uz/biblioteka/IKT.pdf" />
-                    <Documents title="Комплект материалов по вопросам политики в области доступности ИКТ" caption="Комплект материалов для руководителей, участвующих в осуществлении положений Конвенции о правах инвалидов,подготовленный совместно МСЭ и G3ict. Настоящий текст представляет собой выборочный перевод «Комплекта материалов по вопросам политики в области доступности ИКТ для инвалидов» (e-Accessibility Policy Toolkit for Persons with Disabilities) подготовленного G3ict – Глобальной инициативой за инклюзивные ИКТ, ведущей организацией Глобального Альянса Организации Объединенных Наций за ИКТ в целях развития. Оригинал данного материала размещен на веб-сайте G3ict." document="https://www.popliklar.uz/biblioteka/IKT.pdf" />
-                    <Documents title="Комплект материалов по вопросам политики в области доступности ИКТ" caption="Комплект материалов для руководителей, участвующих в осуществлении положений Конвенции о правах инвалидов,подготовленный совместно МСЭ и G3ict. Настоящий текст представляет собой выборочный перевод «Комплекта материалов по вопросам политики в области доступности ИКТ для инвалидов» (e-Accessibility Policy Toolkit for Persons with Disabilities) подготовленного G3ict – Глобальной инициативой за инклюзивные ИКТ, ведущей организацией Глобального Альянса Организации Объединенных Наций за ИКТ в целях развития. Оригинал данного материала размещен на веб-сайте G3ict." document="https://www.popliklar.uz/biblioteka/IKT.pdf" />
-                    <Documents title="Комплект материалов по вопросам политики в области доступности ИКТ" caption="Комплект материалов для руководителей, участвующих в осуществлении положений Конвенции о правах инвалидов,подготовленный совместно МСЭ и G3ict. Настоящий текст представляет собой выборочный перевод «Комплекта материалов по вопросам политики в области доступности ИКТ для инвалидов» (e-Accessibility Policy Toolkit for Persons with Disabilities) подготовленного G3ict – Глобальной инициативой за инклюзивные ИКТ, ведущей организацией Глобального Альянса Организации Объединенных Наций за ИКТ в целях развития. Оригинал данного материала размещен на веб-сайте G3ict." document="https://www.popliklar.uz/biblioteka/IKT.pdf" />
-                </div>
+                <h1>{t("library_title")}</h1>
+                {
+                    posts.map((post) => {
+
+                        const handleDelete = async () => {
+                            // e.preventDefault();
+                            try {
+                                const id = post._id
+                                await api.delete(`/post/${id}`)
+                                window.location.reload(false);
+                            } catch (err) {
+                                console.log(`Error: ${err.message}`)
+                            }
+                        }
+
+                        return (
+                            <div className="documents">
+                                <Documents title={post.title} caption={post.body} document={`http://135.181.200.92:3005/${post.headImage}`} />
+                                <div className='admin-tools'>
+                                    <button onClick={handleDelete}><i className="fa-solid fa-trash"></i> {t("delete_button")}</button>
+                                    {/* <button onClick={handleEdit}>{t("edit_button")}</button> */}
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
             <Footer />
         </>

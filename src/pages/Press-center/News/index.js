@@ -1,28 +1,45 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from '../../../components/Footer'
 import Blocks from '../Blocks'
 import '../index.css'
+import { useTranslation } from 'react-i18next'
+import api from '../../../api/posts'
 
-export default class News extends Component {
-    render() {
-        return (
-            <div className='news'>
-                <h1>Новости и статьи Ассоциации</h1>
-                <div className='news-block'>
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                    <Blocks image="https://picsum.photos/1500/1000" title="Анализ исследования проблем, с которыми сталкиваютсялица с нарушением опорной двигательной системой" url="https://www.imkoniyatlar.uz/" views="304" date="09/04/2022" published="10:53" />
-                </div>
+export default function News() {
+    const [posts, setPosts] = useState([]);
+    const menuId = "news"
 
-                <Footer />
+    useEffect(() => {
+        const fetchPosts = async () => {
+            const res = await api.get(`/post?menuId=${menuId}`);
+            setPosts(res.data.data);
+        };
+
+
+        fetchPosts();
+    }, []);
+
+    const { t } = useTranslation()
+    return (
+        <div className='news'>
+            <h1>{t("press_center_photo_title")}</h1>
+            <div className='news-block'>
+                {posts.map((post) => {
+                    console.log(post)
+                    const date = post.createdAt.split("T")
+                    let dateTime = date[1]
+                    const timeHour = dateTime.split(":")
+                    const time = `${timeHour[0]}:${timeHour[1]}`
+                    return (
+                        <div>
+                            <Blocks image={`http://135.181.200.92:3005/${post.headImage}`} title={post.title} url={post._id} views="0" date={date[0]} published={time} menuId={menuId} />
+                        </div>
+                    )
+                })}
+
             </div>
-        )
-    }
+
+            <Footer />
+        </div>
+    )
 }

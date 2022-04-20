@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Interweave } from 'interweave'
 
+
 export default class CrContent extends Component {
     constructor(props) {
         super(props)

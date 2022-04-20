@@ -1,125 +1,139 @@
+import i18next from "i18next"
+
 export const MenuItems = [{
-    title: 'ГЛАВНАЯ',
+    key: 'navbar_home',
     url: '/',
     cName: 'nav-links',
 },
 {
-    title: 'АССОЦИАЦИЯ',
+    key: 'navbar_association',
     url: '#',
     cName: 'nav-links',
     dropDown: [{
-        title: "ОБ АССОЦИАЦИИ",
+        key: "navbar_about",
         url: 'about',
         cName: 'dropdown-item'
     },
     {
-        title: "УСТАВ",
+        key: "navbar_statute",
         url: 'statute',
         cName: 'dropdown-item'
     },
     {
-        title: "РУКОВОДСТВО",
+        key: "navbar_leadership",
         url: 'leadership',
         cName: 'dropdown-item'
     },
     {
-        title: "СПИСОК ЧЛЕНОВ",
+        key: "navbar_list-of-members",
         url: 'list-of-members',
         cName: 'dropdown-item'
     },
     {
-        title: "СПИСОК СОВЕТА",
+        key: "navbar_list-of-the-board",
         url: 'list-of-the-board',
         cName: 'dropdown-item'
     },
     ]
 },
 {
-    title: 'ДЕЯТЕЛЬНОСТЬ',
+    key: "navbar_activity",
     url: '#',
     cName: 'nav-links',
     dropDown: [{
-        title: "ОТЧЕТ ЗА 2020 ГОД",
+        key: "navbar_report2020",
         url: 'report2020',
         cName: 'dropdown-item'
     },
     {
-        title: "ОТЧЕТ ЗА 2019 ГОД",
+        key: 'navbar_report2019',
         url: 'report2019',
         cName: 'dropdown-item'
     },
     {
-        title: "ДОСТУПНОСТЬ",
+        key: "navbar_accessibility",
         url: 'accessibility',
         cName: 'dropdown-item'
     },
     {
-        title: "СЕМИНАРЫ И КОНФЕРЕНЦИИ",
+        key: "navbar_seminars",
         url: 'seminars',
         cName: 'dropdown-item'
     },
     {
-        title: "ЗАСЕДАНИЯ СОВЕТОВ",
+        key: 'navbar_sessions',
         url: 'sessions',
         cName: 'dropdown-item'
     },
     ]
 },
 {
-    title: 'БИБЛИОТЕКА',
+    key: "navbar_library",
     url: '/library',
     cName: 'nav-links'
 },
 {
-    title: 'КОНВЕНЦИЯ',
+    key: "navbar_convention",
     url: '/convention',
     cName: 'nav-links'
 },
 {
-    title: 'ПРЕСС-ЦЕНТР',
+    key: "press-center",
     url: '#',
     cName: 'nav-links',
     dropDown: [{
-        title: "НОВОСТИ",
+        key: "navbar_news",
         url: '/press-center/news',
         cName: 'dropdown-item'
     },
     {
-        title: "ФОТО",
+        key: "navbar_photo",
         url: '/press-center/photo',
         cName: 'dropdown-item'
     },
     {
-        title: "ВИДЕО",
+        key: "navbar_video",
         url: '/press-center/video',
         cName: 'dropdown-item'
     }
     ]
 },
 {
-    title: 'КОНТАКТЫ',
+    key: "navbar_contact",
     url: '/contact',
     cName: 'nav-links'
 },
 {
-    title: 'РУС',
+    key: "navbar_language",
     icon: 'fa-solid fa-chevron-down',
     url: '#',
     cName: 'nav-links',
     dropDown: [{
-        title: "РУС",
-        url: '/rus',
-        cName: 'dropdown-item'
+        title: "Русский",
+        url: '/ru',
+        cName: 'dropdown-item',
+        onClick: () => {
+            i18next.changeLanguage("ru")
+        },
+        icon: "ru"
     },
     {
         title: "O'zbek",
-        url: '/uzb',
-        cName: 'dropdown-item'
+        url: '/uz',
+        cName: 'dropdown-item',
+        onClick: () => {
+            i18next.changeLanguage("uz")
+        },
+        icon: "uz"
     },
     {
         title: "English",
-        url: '/eng',
-        cName: 'dropdown-item'
+        url: '/en',
+        cName: 'dropdown-item',
+        onClick: () => {
+            i18next.changeLanguage("en")
+        },
+        icon: "gb"
     }
     ]
 },

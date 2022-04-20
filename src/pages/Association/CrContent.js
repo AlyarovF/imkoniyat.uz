@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Interweave } from 'interweave'
 
 export default class CrContent extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class CrContent extends Component {
                 <div className='content-item'>
                     <div className='text'>
                         <h3>{this.props.title}</h3>
-                        <p>{this.props.caption}</p>
+                        <Interweave content={this.props.caption} />
                     </div>
                 </div>
             )
@@ -31,7 +32,7 @@ export default class CrContent extends Component {
                     </div>
                     <div className='text'>
                         <h3>{this.props.title}</h3>
-                        <p>{this.props.caption}</p>
+                        <Interweave content={this.props.caption} />
                     </div>
                 </div>
             )

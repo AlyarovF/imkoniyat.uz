@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import SideBar from '../SideBar'
 import './index.css'
 import Footer from '../../../components/Footer'
+import { useTranslation } from 'react-i18next'
 
 export default function ListOfMembers() {
+    const { t } = useTranslation()
     return (
         <div className='ListOfMembers'>
             <div className='container'>
-                <h1>LIST OF MEMBERS OF THE ASSOCIATION OF DISABLED PEOPLE OF UZBEKISTAN</h1>
+                <h1>{t("listofmembers_title")}</h1>
             </div>
             <div className='ListOfMembers-js container'>
                 <SideBar />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Blocks.css'
 
 export default function Blocks(props) {
@@ -11,9 +12,9 @@ export default function Blocks(props) {
                 </div>
                 <img src={props.image} alt="image" />
             </div>
-            <h3><a href={props.url}>
+            <h3><Link to={`/press-center/${props.url}`}>
                 {props.title}
-            </a></h3>
+            </Link></h3>
             <div className='date'>
                 <div><i class="fa-solid fa-eye"></i> {props.views}</div>
                 <div><i class="fa-solid fa-calendar"></i> {props.date} {props.published}</div>

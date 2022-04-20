@@ -74,3 +74,21 @@ html {
         max-width: 1140px
     }
 }
+
+
+
+
+
+
+.admin-tools button {
+    background-color: #14284b;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.admin-tools button:hover {
+    background-color: #385a94;
+}
