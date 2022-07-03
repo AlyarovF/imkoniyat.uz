@@ -30,25 +30,8 @@ const Library = () => {
                 {
                     posts.map((post) => {
 
-                        const handleDelete = async () => {
-                            // e.preventDefault();
-                            try {
-                                const id = post._id
-                                await api.delete(`/post/${id}`)
-                                window.location.reload(false);
-                            } catch (err) {
-                                console.log(`Error: ${err.message}`)
-                            }
-                        }
-
                         return (
-                            <div className="documents">
-                                <Documents title={post.title} caption={post.body} document={`http://135.181.200.92:3005/${post.headImage}`} />
-                                <div className='admin-tools'>
-                                    <button onClick={handleDelete}><i className="fa-solid fa-trash"></i> {t("delete_button")}</button>
-                                    {/* <button onClick={handleEdit}>{t("edit_button")}</button> */}
-                                </div>
-                            </div>
+                            <Documents title={post.title} caption={post.body} document={`https://api.mamadaliyev.uz/imkoniyat/${post.headImage}`} />
                         )
                     })
                 }

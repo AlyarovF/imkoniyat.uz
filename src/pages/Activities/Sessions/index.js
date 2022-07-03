@@ -34,18 +34,8 @@ export default function Sessions() {
                 <div className='content'>
                     {
                         posts.map((post) => {
-                            const handleDelete = async () => {
-                                // e.preventDefault();
-                                try {
-                                    const id = post._id
-                                    await api.delete(`/post/${id}`)
-                                    window.location.reload(false);
-                                } catch (err) {
-                                    console.log(`Error: ${err.message}`)
-                                }
-                            }
                             return (
-                                <CrContent mediatype="image" src={`http://135.181.200.92:3005/${post.headImage}`} title={post.title} caption={post.body} />
+                                <CrContent mediatype="image" src={`https://api.mamadaliyev.uz/imkoniyat/${post.headImage}`} title={post.title} caption={post.body} />
                             )
                         })
                     }
