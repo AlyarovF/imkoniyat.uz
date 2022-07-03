@@ -22,12 +22,10 @@ import Report2019 from "./pages/Activities/Report2019";
 import Seminars from "./pages/Activities/Seminars";
 import Sessions from "./pages/Activities/Sessions";
 import ScrollToTop from "./components/ScrollToTop";
-import Editor from "./components/Editor";
 import PostPage from "./pages/PostPage";
 
 import api from "./api/posts"
 import { useEffect } from "react";
-import CreateMenu from "./components/CreateMenu";
 
 export default function App() {
   return (
@@ -36,8 +34,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
-          <Route path="editor" element={<Editor />} />
-          <Route path="create-menu" element={<CreateMenu />} />
           <Route path="about" element={<About />} />
           <Route path="statute" element={<Statute />} />
           <Route path="leadership" element={<Leadership />} />

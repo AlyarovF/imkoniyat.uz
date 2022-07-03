@@ -10,26 +10,9 @@
 }
 
 .library .documents a.download_button {
-    display: block;
-    text-align: right;
+    display: block !important;
+    text-align: right !important;
     margin-top: 20px;
     text-decoration: none;
     cursor: pointer;
-}
-
-.library .documents .admin-tools button {
-    background-color: #14284b;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-}
-
-.library .documents .admin-tools button:hover {
-    background-color: #385a94;
-}
-
-.library .documents a:hover {
-    color: #14284b;
 }

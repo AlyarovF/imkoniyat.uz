@@ -20,30 +20,12 @@ export default function News() {
         fetchPosts();
     }, []);
 
-    const handleEdit = async (id) => {
-    }
-
-    const handleDelete = async () => {
-        // e.preventDefault();
-        try {
-            const id = posts._id
-            await api.delete(`/post/${id}`)
-            navigate(`/press-center/${posts.menuId}`)
-        } catch (err) {
-            console.log(`Error: ${err.message}`)
-        }
-    }
-
     const { t } = useTranslation()
     return (
         <div className='news'>
             <h1>{t("press_center_news_title")}</h1>
             <div className='news-block container'>
-                <CrContent title={posts.title} caption={posts.body} mediatype="image" src={`http://135.181.200.92:3005/${posts.headImage}`} views="0" />
-                <div className='admin-tools'>
-                    <button onClick={handleDelete}><i className="fa-solid fa-trash"></i> {t("delete_button")}</button>
-                    {/* <button onClick={handleEdit}>{t("edit_button")}</button> */}
-                </div>
+                <CrContent title={posts.title} caption={posts.body} mediatype="image" src={`https://api.mamadaliyev.uz/imkoniyat/${posts.headImage}`} views="0" />
             </div>
 
             <Footer />

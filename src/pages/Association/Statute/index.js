@@ -31,16 +31,6 @@ export default function Statute() {
                 <div className='content'>
                     {
                         posts.map((post) => {
-                            const handleDelete = async () => {
-                                // e.preventDefault();
-                                try {
-                                    const id = post._id
-                                    await api.delete(`/post/${id}`)
-                                    window.location.reload(false);
-                                } catch (err) {
-                                    console.log(`Error: ${err.message}`)
-                                }
-                            }
                             return (
                                 <CrContent title={post.title} caption={post.body} />
                             )

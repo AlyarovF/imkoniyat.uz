@@ -77,7 +77,7 @@ export default function Navbar() {
             }
           })}
         </ul>
-        {/* <ul className='opportunity'>
+        <ul className='opportunity'>
           <li className='opportunity-modul speech'>
             <Link onClick={specialBox} to="" className=""><i className="fa-solid fa-eye"></i></Link>
             <div className={state.specialbox ? 'opportunity-box active' : 'opportunity-box'}>
@@ -129,7 +129,7 @@ export default function Navbar() {
               </div>
             </div>
           </li>
-        </ul> */}
+        </ul>
       </nav>
       <Outlet />
     </>
